@@ -1,0 +1,156 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    overflow-x: clip;
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+div {
+    padding: 30px;
+    border: 20px double beige;
+    outline: 10px solid deeppink;
+    background-color: peachpuff;
+    margin: 20px;
+    box-shadow: 20px 10px 30px black;
+    color: royalblue;
+    text-align: center;
+    max-width: calc(100% - 40px);
+    overflow-wrap: break-word;
+}
+
+h2 {
+    color: darkturquoise;
+    text-align: center;
+    overflow-wrap: break-word;
+}
+
+span {
+    color: snow;
+}
+
+#l {
+    background-color: cadetblue;
+    color: deepskyblue;
+    padding: 10px 20px;
+    transition: 2s;
+    text-decoration: none;
+    display: inline-block;
+    max-width: 100%;
+}
+
+#l:hover {
+    background-color: royalblue;
+}
+
+/* Header */
+.rt {
+    background-color: peachpuff;
+    padding: 8px 15px;
+    outline: 5px solid deeppink;
+    border: 8px double beige;
+    position: sticky;
+    top: 5px;
+    z-index: 100;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 15px;
+
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+/* Navigation links */
+.rt a {
+    text-decoration: none;
+    color: navy;
+    font-size: 15px;
+    padding: 5px;
+    white-space: nowrap;
+    display: inline-block;
+    flex-shrink: 1;
+}
+
+/* Images and videos */
+img,
+video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .rt {
+        gap: 10px;
+        padding: 8px;
+        outline-width: 4px;
+        border-width: 5px;
+    }
+
+    .rt a {
+        font-size: 15px;
+        padding: 4px;
+    }
+
+    div {
+        padding: 20px;
+        margin: 15px;
+        max-width: calc(100% - 30px);
+        border-width: 12px;
+        outline-width: 4px;
+    }
+
+    #l {
+        padding: 8px 14px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .rt {
+        gap: 4px;
+        padding: 6px 3px;
+        outline-width: 2px;
+        border-width: 3px;
+        top: 0;
+    }
+
+    .rt a {
+        font-size: clamp(9px, 2.8vw, 12px);
+        padding: 4px 2px;
+    }
+
+    div {
+        padding: 12px;
+        margin: 10px;
+        max-width: calc(100% - 20px);
+        border-width: 6px;
+        outline-width: 2px;
+        box-shadow: 5px 5px 12px black;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    #l {
+        padding: 8px 12px;
+    }
+}
